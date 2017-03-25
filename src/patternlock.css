@@ -1,0 +1,28 @@
+/*重置元素样式*/
+body, h1, div, p, form, label, input {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #f0f0f2;
+}
+#title {
+  height: 38px;
+  font-size: 20px;
+  font-weight: normal;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #c9c9c9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main {
+  text-align: center;
+}
+#context {
+  margin: 30px auto;
+}
+#setStatus label {
+  display: block;
+}

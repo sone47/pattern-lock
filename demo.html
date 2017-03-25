@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+  <title>PatternLock</title>
+  <link rel="stylesheet" type="text/css" href="./src/patternlock.css">
+  <script type="text/javascript" src="./src/patternlock.js"></script>
+</head>
+<body>
+  <h1 id="title">手势密码</h1>
+  <div id="main">
+    <!-- 画布 -->
+    <canvas id="context"></canvas>
+    <!-- 选择设置密码还是修改密码的单选按钮，value 设置密码为 0，验证密码为 1 -->
+    <form id="setStatus">
+      <label>
+        <input type="radio" name="password" checked="checked" value="0">
+        设置密码
+      </label>
+      <label>
+        <input type="radio" name="password" value="1">
+        验证密码
+      </label>
+    </form>
+  </div>
+  <script type="text/javascript">
+    new Lock({
+      ele: document.getElementById('context'),
+      formEle: document.getElementById('setStatus'),
+      n: 3,
+      height: 300,
+      originFillColor: '#fff',
+      fillColor: '#ffa726',
+      originStrokeColor: '#ddd',
+      strokeColor: '#fc9c1f',
+      marginX: 38,
+      marginY: 34
+    });
+  </script>
+</body>
+</html>
