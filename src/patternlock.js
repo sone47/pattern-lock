@@ -50,6 +50,7 @@ function Lock(config) {
   this.init();
 }
 
+// 初始化
 Lock.prototype.init = function() {
   var config = this.config;
   var ele = config.ele;
@@ -237,8 +238,7 @@ Lock.prototype.save = function(pos) {
       ctx.fillStyle = config.fillColor;
       ctx.strokeStyle = config.strokeColor;
       ctx.lineWidth = config.border;
-      this.drawDot(dots[i].x, dots[i].y);
-
+      // 密码点不能重复添加
       if(this.lock.indexOf(dots[i]) === -1) {
         this.lock.push(dots[i]);
         this.lockIndex += i;
@@ -248,6 +248,7 @@ Lock.prototype.save = function(pos) {
   }
 };
 
+// 手指移开时怎么显示提示 tip
 Lock.prototype.showTips = function() {
   var config = this.config;
   var ctx = this.ctx;
