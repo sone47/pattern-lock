@@ -1,5 +1,7 @@
 # Web 移动端手势密码
 
+## 图片演示
+
 ![演示](https://github.com/sone47/pattern-lock/blob/master/demo.gif)
 
 ## Usage
